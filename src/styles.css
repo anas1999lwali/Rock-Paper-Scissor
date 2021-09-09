@@ -53,16 +53,21 @@ button {
     cursor: pointer;
 }
 
+button img {
+    max-width: 70px;
+}
 
-#rock-btn:hover {
+
+#rock-btn:hover ,
+#rock-btn:active{
     border-color: #5c5757;
 }
 
-#paper-btn:hover {
+#paper-btn:hover,#paper-btn:active {
     border-color: #fdc91c;
 }
 
-#scissor-btn:hover {
+#scissor-btn:hover,#scissor-btn:active {
     border-color: #f85959;
 }
 
@@ -92,6 +97,65 @@ button {
     font-weight: 700;
 }
 
+
+
+@media (max-width:655px){
+    .container {
+        width: 85%;
+        padding: 1.2em;
+        
+    }
+
+
+.score {
+    margin-top: 15px;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.score > * {
+    text-align: center;
+}
+
+#computer-score {
+    grid-area: computer;
+}
+#draws {
+    grid-area: draws;
+    display: none;
+}
+#scissor-btn {
+    grid-area: player-score;
+}
+
+.btns-container {
+    width: 70%;
+    /* margin-top: 10px; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: '. scissor .' 'rock  . paper' ;
+    margin-top: 3em;
+
+} 
+
+#rock-btn {
+    grid-area: rock;
+
+}
+#paper-btn {
+    grid-area: paper;
+}
+#scissor-btn {
+    grid-area: scissor;
+}
+
 button img {
-    max-width: 70px;
+    max-width: 35px;
+}
+
+.win-lose {
+    width: 50%;
+}
+
 }

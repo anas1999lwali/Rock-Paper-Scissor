@@ -3,9 +3,13 @@ const paperBtn = document.querySelector('#paper-btn');
 const scissorBtn = document.querySelector('#scissor-btn');
 
 let computerScore = document.querySelector('#computer-score');
+computerScore.textContent+= 0;
+
 let playerScore = document.querySelector('#player-score');
+playerScore.textContent += 0;
 
 let draws = document.querySelector('#draws');
+draws.textContent += 0;
 
 let playerChoise = document.querySelector('#player-choise');
 let computerChoise = document.querySelector('#computer-choise');
